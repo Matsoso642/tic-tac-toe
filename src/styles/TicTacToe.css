@@ -1,0 +1,87 @@
+/* Container for the whole game */
+.game-container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1f2e28;
+  min-height: 500px;
+  font-family: "Comic Sans MS", cursive;
+}
+
+/* Title */
+.title {
+  color: #e8e4d8;
+  letter-spacing: 1px;
+}
+
+/* Status message */
+.status {
+  color: #9ba89e;
+  margin-bottom: 24px;
+}
+
+/* Board wrapper (relative positioning for grid + strike line) */
+.board-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+/* Grid lines */
+.grid-line {
+  position: absolute;
+  background-color: #e8e4d8;
+}
+.grid-line.vertical {
+  top: 0;
+  width: 2px;
+  height: 300px;
+}
+.grid-line.horizontal {
+  left: 0;
+  width: 300px;
+  height: 2px;
+}
+
+/* Board squares arranged in grid */
+.board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+}
+
+/* Individual square button */
+.square {
+  font-size: 40px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: #f2a65a;
+}
+.square:empty {
+  color: inherit;
+}
+
+/* Strike-through line */
+.strike {
+  position: absolute;
+  background-color: #e8e4d8;
+  border-radius: 4px;
+}
+
+/* Restart button */
+.restart-btn {
+  margin-top: 24px;
+  background-color: transparent;
+  color: #e8e4d8;
+  border: 1px solid #9ba89e;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: inherit;
+}
